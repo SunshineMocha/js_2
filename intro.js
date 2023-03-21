@@ -97,39 +97,91 @@
 
 */
 
-// Switch case
+// Switch case, "menu", sostituzione if else
 
-var counter = prompt("digita un numero multiplo di 10");
-switch(counter)
+/*
+let counter = prompt("digita un numero multiplo di 10");
+switch(Number(counter)) //converte la stringa in numero
 {
     case 10:
-        alert("Hai digitato 10!");
+        alert("Hai digitato 10");
         break
     case 20:
-        alert("Hai digitato 20!");
-        break");
-    case 30: Talert("Hai digitato 30!");
-    break
-    default
-    alert("Hai digitato un altro numwero", alerta , bibido
-    )
+        alert("Hai digitato 20");
+        break
+    case 30: 
+        alert("Hai digitato 30");
+        break
+    default:
+    alert("Hai digitato un altro numero");
+    break;
+}
+*/
+
+/*
+    let nome = prompt("digita un nome");
+    switch(nome) //converte la stringa in numero
+    {
+        case "marco":
+            alert("Hai digitato marco");
+            break
+        case "paolo":
+            alert("Hai digitato paolo");
+            break
+        case "davide": 
+            alert("Hai digitato davide");
+            break
+        default:
+        alert("Hai digitato un altro nome");
+        break;
+    }
+*/
+
+// INDOVINA IL NUMERO
+
+/*
+    let numero = 81;
+    while(true){ // fino a quando è vero
+        let risposta = prompt("Indovina il numero"); //input listener
+        if(numero === Number(risposta)){ //if e condizione. con triplo = devo usare Number per convertire da stringa a numero. Altrimenti converte in automatico
+            break; // esce se la condizione è vera
+        }
+        else{
+            alert("ritenta"); // se il numero è sbagliato da ritenta e torna nel loop
+        }
+    }
+*/
+
+let numero = 81;
+let tentativi = 0; 
+let rimasti = 10;
+while(true){ // fino a quando è vero
+    let risposta = prompt("Indovina il numero, tentativi rimasti = " + rimasti); //input listener
+    if(numero === Number(risposta)){ //if e condizione. con triplo = devo usare Number per convertire da stringa a numero. Altrimenti converte in automatico
+        break; // esce se la condizione è vera
+    }
+    else{
+        tentativi = tentativi + 1;
+        rimasti = rimasti - 1;
+        alert("ritenta, numero tentativi = " + tentativi ); // se il numero è sbagliato da ritenta e torna nel loop
+        if(tentativi===10){
+            break;
+        }
+    }
 }
 
 
-
-
-
-
 /*
-ESERCITAZIONE PERSONALE
+//ESERCITAZIONE PERSONALE
 let nome = prompt("Digita nome");
 alert(typeof nome);
+alert(Number(nome));
 let cognome = prompt("Digita cognome");
 alert(typeof cognome);
 let nomeCognome = nome + " " + cognome;
-alert(typeof nomeCognome);
+alert(nomeCognome);
 
-if(typeof nome === "string" && typeof cognome === "string")
+if((Number(nome) !== "string") && (Number(cognome) !== "string"))
 {
     alert("il tuo nome è " + nomeCognome);
 }
