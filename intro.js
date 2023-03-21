@@ -151,7 +151,7 @@ switch(Number(counter)) //converte la stringa in numero
         }
     }
 */
-
+/*
 let numero = 81;
 let tentativi = 0; 
 let rimasti = 10;
@@ -169,19 +169,15 @@ while(true){ // fino a quando è vero
         }
     }
 }
-
+*/
 
 /*
 //ESERCITAZIONE PERSONALE
 let nome = prompt("Digita nome");
-alert(typeof nome);
-alert(Number(nome));
 let cognome = prompt("Digita cognome");
-alert(typeof cognome);
 let nomeCognome = nome + " " + cognome;
-alert(nomeCognome);
 
-if((Number(nome) !== "string") && (Number(cognome) !== "string"))
+if()
 {
     alert("il tuo nome è " + nomeCognome);
 }
